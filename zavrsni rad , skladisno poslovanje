@@ -1,0 +1,54 @@
+--create database skladisnoposlovanje;
+--go
+--use skladisnoposlovanje;
+
+--create table skladiste(
+
+--sifra int not null primary key identity(1,1),
+--proizvod varchar(50) not null,
+--skladistar varchar(50) not null,
+----);
+
+--create table proizvod(
+
+--sifra int not null primary key identity(1,1),
+--naziv varchar(50) not null,
+--sifraproizvoda int,
+--datumulaza date,
+--datumizlaza date,
+--roktrajanja datetime
+--);
+
+--create table izdatnica(
+
+--sifra int not null primary key identity(1,1),
+--brojizdatnice int not null,
+--osobazaprimanja varchar(50) not null,
+--vozilozaprimanja varchar(10),
+--radnajedinica varchar(50),
+--skladistar varchar(50) not null,
+--proizvod varchar(50) not null,
+--kolicina int not null,
+--sifraproizvoda int
+--);
+
+--create table vozilo(
+
+--sifra int not null primary key identity(1,1),
+--naziv varchar(50) not null,
+--registarskaoznaka varchar(20) not null,
+--radnajedinica varchar(50) not null,
+--troskovnomjesto int not null,
+--godiste int,
+--datumregistracije date,
+--);
+
+--create table osobazaduzenja(
+
+--sifra int not null primary key identity(1,1),
+--ime varchar(50) not null,
+--prezime varchar(50) not null,
+--radnomjesto varchar(50),
+--radnajedinica varchar(50)
+
+--);
