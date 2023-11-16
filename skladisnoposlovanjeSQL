@@ -17,41 +17,64 @@
 --sifraproizvoda int,
 --mjernajedinica varchar(20) not null
 
---);
 
---create table izdatnica(
-
---sifra int not null primary key identity(1,1),
---brojizdatnice int not null,
---datum datetime,
---osoba int not null,
---skladistar int not null,
---proizvod int not null,
---kolicina int not null,
---napomena varchar(250)
-
---);
-
---create table osoba(
-
---sifra int not null primary key identity(1,1),
---ime varchar(50) not null,
---prezime varchar(50) not null,
---radnomjesto varchar(50),
---brojtelefona int
-
---);
-
---create table skladistar(
-
---sifra int not null primary key identity(1,1),
---ime varchar(50) not null,
---prezime varchar(50) not null,
---brojtelefona int
-
---);
+use master;
+go
+drop database if exists skladisnoposlovanje;
+go
+create database skladisnoposlovanje;
+go
+alter database skladisnoposlovanje collate Croatian_CI_AS;
+go
+use skladisnoposlovanje;
 
 
---alter table skladistar foreign key (izdatnica) references izdatnica(sifra);
---alter table osoba foreign key (osoba) referencesizdatnice(sifra);
---alter table proizvod foregn key (proizvod) references izdatnice(sifra);
+create table proizvodi(
+
+sifra int not null primary key identity(1,1),
+naziv varchar(50) not null,
+sifraproizvoda int,
+mjernajedinica varchar(20) not null,
+
+
+);
+
+create table izdatnice(
+
+sifra int not null primary key identity(1,1),
+brojizdatnice int not null,
+datum datetime,
+osoba int not null,
+skladistar int not null,
+proizvod int not null,
+kolicina int not null,
+napomena varchar(250)
+
+);
+
+create table osobe(
+
+sifra int not null primary key identity(1,1),
+ime varchar(50) not null,
+prezime varchar(50) not null,
+radnomjesto varchar(50),
+brojtelefona int,
+
+
+
+);
+
+create table skladistari(
+
+sifra int not null primary key identity(1,1),
+ime varchar(50) not null,
+prezime varchar(50) not null,
+brojtelefona int,
+
+
+);
+
+
+alter table izdatnice add foreign key (skladistar) references skladistari(sifra);
+alter table izdatnice add foreign key (osoba) references osobe(sifra);
+alter table izdatnice add foreign key (proizvod) references proizvodi(sifra);
