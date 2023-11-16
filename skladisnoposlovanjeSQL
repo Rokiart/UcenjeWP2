@@ -1,23 +1,4 @@
 
---use master;
---go
---drop database if exists skladisnoposlovanje;
---go
---create database skladisnoposlovanje;
---go
---alter database skladisnoposlovanje collate Croatian_CI_AS;
---go
---use skladisnoposlovanje;
-
-
---create table proizvod(
-
---sifra int not null primary key identity(1,1),
---naziv varchar(50) not null,
---sifraproizvoda int,
---mjernajedinica varchar(20) not null
-
-
 use master;
 go
 drop database if exists skladisnoposlovanje;
