@@ -23,7 +23,7 @@ mjernajedinica varchar(20) not null,
 create table izdatnice(
 
 sifra int not null primary key identity(1,1),
-brojizdatnice int not null,
+brojizdatnice int identity(1,1),
 datum datetime,
 osoba int not null,
 skladistar int not null,
@@ -38,7 +38,6 @@ create table osobe(
 sifra int not null primary key identity(1,1),
 ime varchar(50) not null,
 prezime varchar(50) not null,
-radnomjesto varchar(50),
 brojtelefona int,
 
 
@@ -59,3 +58,8 @@ brojtelefona int,
 alter table izdatnice add foreign key (skladistar) references skladistari(sifra);
 alter table izdatnice add foreign key (osoba) references osobe(sifra);
 alter table izdatnice add foreign key (proizvod) references proizvodi(sifra);
+
+insert into proizvodi(naziv,sifraproizvoda,mjernajedinica)values;
+insert into izdatnice(brojizdatnice,datum,osoba,skladistar,proizvod,kolicina,napomena)values;
+insert into osobe(ime,prezime,brojtelefona)values;
+insert into skladistari(ime,prezime,brojtelefona)values;
