@@ -23,7 +23,7 @@ mjernajedinica varchar(20) not null,
 create table izdatnice(
 
 sifra int not null primary key identity(1,1),
-brojizdatnice int identity(1,1),
+brojizdatnice int,
 datum datetime,
 osoba int not null,
 skladistar int not null,
