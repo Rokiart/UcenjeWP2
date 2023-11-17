@@ -1,0 +1,49 @@
+select * from skladistari;
+
+insert into skladistari(ime,prezime) 
+values ('Roman','Žarić'),('Miroslav','Janić');
+
+insert into proizvodi(naziv,mjernajedinica) values
+('lopata','kom'),('metla','kom'),('sapun','kom'),('šampon','lit'),('gedore','gar'),('deterđent','kg'),('pijesak','t');
+
+select * from proizvodi;
+
+insert into osobe(ime,prezime,brojtelefona) values
+('Božić','Petra',null),
+('Farkaš','Dominik',null),
+('Glavaš','Natalija',null),
+('Janić','Miroslav',null),
+('Janješić','Filip',null),
+('Jović','Nataša',null),
+('Barić','Luka',null),
+('Kelava','Antonio',null),
+('Kešinović','Marijan',null),
+('Leninger','Ivan',null),
+('Macanga','Antonio',null),
+('Miloloža','Antonio',null),
+('Pavković','Matija',null),
+('Peterfaj','Karlo',null),
+('Plečaš','Adriana',null),
+('Senčić','Ivan',null),
+('Šuler','Zvonimir',null),
+('Turček','Mario',null),
+('Veseli','Domagoj',null),
+('Vuković','Kristijan',null),
+('Vukušić','Ivan',null),
+('Žarić','Roman',null),
+('Pavlović','Ivan',null),
+('Županić','Andrea',null),
+('Županić','Tomislav',null),
+('Petak','Martina',null),
+('Perak','Marko',null),
+('Mokriš','Bartol',null),
+('Jularić','Ljubomir',null),
+('Ćelić','Ivor',null);
+
+select * from osobe;
+
+insert into izdatnice(osoba,skladistar,proizvod) values
+
+(1,1,5),(2,2,1),(3,1,1),(4,1,6),(5,2,3);
+
+select * from izdatnice;
