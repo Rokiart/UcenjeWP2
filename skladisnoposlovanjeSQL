@@ -85,7 +85,8 @@ values
 ('pijesak','t');
 
 
-insert into osobe(ime,prezime,brojtelefona) values
+insert into osobe(ime,prezime,brojtelefona) 
+values
 ('Božić','Petra',null),
 ('Farkaš','Dominik',null),
 ('Glavaš','Natalija',null),
@@ -118,6 +119,6 @@ insert into osobe(ime,prezime,brojtelefona) values
 ('Ćelić','Ivor',null);
 
 
-insert into izdatnice(brojizdatnice,osoba,skladistar,proizvod) values
-
+insert into izdatnice(brojizdatnice,osoba,skladistar,proizvod) 
+values
 (1001,1,1,5),(1002,12,2,6),(1003,19,1,5),(1004,24,2,3);
