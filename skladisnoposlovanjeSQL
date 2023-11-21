@@ -52,9 +52,11 @@ izdatnica int not null;
 );
 
 
+alter table izdatniceproizvodi add foreign key (proizvod) references proizvodi(sifra);
+alter table izdatniceproizvodi add foreign key (izdatnica) references izdatnice(sifra);
 alter table izdatnice add foreign key (skladistar) references skladistari(sifra);
 alter table izdatnice add foreign key (osoba) references osobe(sifra);
-alter table izdatnice add foreign key (proizvod) references proizvodi(sifra);
+
 
 
 insert into skladistari(ime,prezime) 
