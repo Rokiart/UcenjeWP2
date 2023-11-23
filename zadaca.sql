@@ -1,4 +1,4 @@
-﻿-- select lista nalazi se izmeðu select i from
+﻿﻿-- select lista nalazi se izmeðu select i from
 
 -- filtriranje kolona
 
@@ -112,7 +112,8 @@ select ime from autor;
 
 -- koliko ima redova u tablici autor
 select * from autor;
-select * from autor count;
+select * from autor count; -- neispravno
+select count (*) from autor;
 
 
 -- izlistajte sve autore koji su roðeni u 
@@ -133,7 +134,7 @@ select * from autor;
 -- Moli pomoæ knjižnièarke koje knjige da 
 -- posudi kako bi ju prebolio
 
-select * from katalog where (naslov='ljubav' or naslov='bol');
+select * from katalog where (naslov like '%ljubav%' or naslov like '%bol%' or naslov like '%prekid%');
 
 select * from katalog;
 -- islistajte sve neaktivne izdavaèe
@@ -143,13 +144,15 @@ select * from izdavac where (aktivan=0);
 -- izlistajte sve izdavaèe koji su
 -- društva s ogranièenom odgovornošæu
 
-select * from izdavac where (naziv like '%d.o.o');
+select * from izdavac where naziv like '%d%o%o%';
 
 
 -- Izlistajte sva mjesta u osjeèko baranjskoj županiji
 select * from mjesto;
 select * from mjesto where postanskiBroj like '31%';
-select distinct mjesto where postanskiBroj like '31%';
+select distinct mjesto where postanskiBroj like '31%'; - neispravan ?
+select distinct postanskiBroj from mjesto where postanskiBroj like '31%'; -ispravan
+
 
 
 
