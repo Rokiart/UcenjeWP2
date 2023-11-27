@@ -22,7 +22,7 @@ create table skladistari(
 sifra int not null primary key identity(1,1),
 ime varchar(50) not null,
 prezime varchar(50) not null,
-brojtelefona int
+brojtelefona varchar(20)
 );
 
 create table osobe(
@@ -30,7 +30,7 @@ create table osobe(
 sifra int not null primary key identity(1,1),
 ime varchar(50) not null,
 prezime varchar(50) not null,
-brojtelefona int
+brojtelefona varchar(20)
 );
 
 create table izdatnice(
@@ -40,7 +40,6 @@ brojizdatnice int not null,
 datum datetime,
 osoba int not null references osobe(sifra),
 skladistar int not null references skladistari(sifra),
-kolicina int,
 napomena varchar(250)
 );
 
@@ -48,7 +47,8 @@ create table izdatniceproizvodi (
 
 sifra int not null primary key identity(1,1),
 proizvod int not null references proizvodi(sifra),
-izdatnica int not null references izdatnice(sifra)
+izdatnica int not null references izdatnice(sifra),
+kolicina int, 
 );
 
 
