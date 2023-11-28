@@ -45,7 +45,6 @@ napomena varchar(250)
 
 create table izdatniceproizvodi (
 
-sifra int not null primary key identity(1,1),
 proizvod int not null references proizvodi(sifra),
 izdatnica int not null references izdatnice(sifra),
 kolicina int
@@ -79,7 +78,7 @@ values
 --5
 ('gedore','gar'),
 --6
-('deterðent','kg'),
+('deterđent','kg'),
 --7
 ('pijesak','t');
 
@@ -90,7 +89,7 @@ values
 ('Farkaš','Dominik',null),
 ('Glavaš','Natalija',null),
 ('Janić','Miroslav',null),
-('Janješiæ','Filip',null),
+('Janješić','Filip',null),
 ('Jović','Nataša',null),
 ('Barić','Luka',null),
 ('Kelava','Antonio',null),
@@ -100,10 +99,10 @@ values
 ('Miloloža','Antonio',null),
 ('Pavković','Matija',null),
 ('Peterfaj','Karlo',null),
-('Pleèaš','Adriana',null),
-('Senèić','Ivan',null),
+('Plečaš','Adriana',null),
+('Senčić','Ivan',null),
 ('Šuler','Zvonimir',null),
-('Turèek','Mario',null),
+('Turček','Mario',null),
 ('Veseli','Domagoj',null),
 ('Vuković','Kristijan',null),
 ('Vukušić','Ivan',null),
