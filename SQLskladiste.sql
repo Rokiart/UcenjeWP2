@@ -1,4 +1,4 @@
-﻿use master;
+use master;
 go
 drop database if exists skladisnoposlovanje;
 go
@@ -62,9 +62,9 @@ kolicina int
 insert into skladistari(ime,prezime) 
 values
 --1
-('Roman','Žariæ'),
+('Roman','Žarić'),
 --2
-('Miroslav','Janiæ');
+('Miroslav','Janić');
 
 insert into proizvodi(naziv,mjernajedinica) 
 values
@@ -86,36 +86,36 @@ values
 
 insert into osobe(prezime,ime,brojtelefona) 
 values
-('Božiæ','Petra',null),
+('Božić','Petra',null),
 ('Farkaš','Dominik',null),
 ('Glavaš','Natalija',null),
-('Janiæ','Miroslav',null),
+('Janić','Miroslav',null),
 ('Janješiæ','Filip',null),
-('Joviæ','Nataša',null),
-('Bariæ','Luka',null),
+('Jović','Nataša',null),
+('Barić','Luka',null),
 ('Kelava','Antonio',null),
-('Kešinoviæ','Marijan',null),
+('Kešinović','Marijan',null),
 ('Leninger','Ivan',null),
 ('Macanga','Antonio',null),
 ('Miloloža','Antonio',null),
-('Pavkoviæ','Matija',null),
+('Pavković','Matija',null),
 ('Peterfaj','Karlo',null),
 ('Pleèaš','Adriana',null),
-('Senèiæ','Ivan',null),
+('Senèić','Ivan',null),
 ('Šuler','Zvonimir',null),
 ('Turèek','Mario',null),
 ('Veseli','Domagoj',null),
-('Vukoviæ','Kristijan',null),
-('Vukušiæ','Ivan',null),
-('Žariæ','Roman',null),
-('Pavloviæ','Ivan',null),
-('Županiæ','Andrea',null),
-('Županiæ','Tomislav',null),
+('Vuković','Kristijan',null),
+('Vukušić','Ivan',null),
+('Žarić','Roman',null),
+('Pavlović','Ivan',null),
+('Županić','Andrea',null),
+('Županić','Tomislav',null),
 ('Petak','Martina',null),
 ('Perak','Marko',null),
 ('Mokriš','Bartol',null),
-('Julariæ','Ljubomir',null),
-('Æeliæ','Ivor',null);
+('Jularić','Ljubomir',null),
+('Čelić','Ivor',null);
 
 
 insert into izdatnice(brojizdatnice,osoba,skladistar) 
